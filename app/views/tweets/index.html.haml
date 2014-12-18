@@ -1,0 +1,47 @@
+.row{ ng: { controller: 'TwitterCtrl' } }
+  .col-md-6.col-md-offset-3
+    %h1 Find the Mood on Twitter
+    %br
+    .pick-handle
+      %form.form-horizontal{ 'ng-submit' => 'getMood()' }
+        .input-group
+          %span.input-group-addon @
+          %input.form-control{ type: 'text', placeholder: 'TwitterHandle', 'ng-model' => 'handle' }
+          .input-group-btn
+            %button.btn.btn-default GET MOOD
+
+    %br
+    .or
+      .text
+        or select from these popular accounts
+      .links
+        %a{ 'ng-click' => 'handle="grumpycat"; getMood()' } @GrumpyCat
+        &bull;
+        %a{ 'ng-click' => 'handle="KenStipek"; getMood()' } @KenStipek
+        &bull;
+        %a{ 'ng-click' => 'handle="KatyPerry"; getMood()' } @KatyPerry
+        &bull;
+        %a{ 'ng-click' => 'handle="TheAngryGrandpa"; getMood()' } @TheAngryGrandpa
+        &bull;
+        %a{ 'ng-click' => 'handle="LadyGaga"; getMood()' } @LadyGaga
+      %hr
+
+    .result.text-center{ 'ng-class' => "{hidden: mood != 'happy'}" }
+      .icon
+        = fa_icon 'smile-o'
+      .text
+        HAPPY
+
+    .result.text-center{ 'ng-class' => "{hidden: mood != 'sad'}" }
+      .icon
+        = fa_icon 'frown-o'
+      .text
+        SAD
+
+    .result.text-center{ 'ng-class' => "{hidden: mood != 'indeferent'}" }
+      .text
+        INDEFERENT
+
+    .result.text-center{ 'ng-class' => "{hidden: mood != 'loading'}" }
+      .icon
+        = fa_icon 'circle-o-notch spin'
