@@ -15,3 +15,4 @@ This app was created with goal of learning more about AngularJS and practicing s
 - CoffeeScript
 - HAML
 - SCSS
+- FontAwesome
