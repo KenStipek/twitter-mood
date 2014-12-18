@@ -5,7 +5,7 @@ Twitter Mood is a simple app that displays the recent mood of the tweeter given 
 You can [use it here](https://twitter-mood.herokuapp.com/).
 
 ### Technologies
-This app was created with goal of learning more about AngularJS and practicing simple ways to get personal attitudes from social networks. Here are primary technologies utilized:
+This app was created with goal of learning more about AngularJS and practicing simple ways to get personal attitudes from social networks. Here are the primary technologies used:
 
 - Ruby on Rails
 - AngularJS
